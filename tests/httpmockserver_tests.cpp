@@ -122,12 +122,7 @@ TEST(HttpMockServer, PostFormUrlEncoded)
 TEST(HttpMockServer, PostMultipart)
 {
     std::string url = "/post-multipart-url";
-
-    std::string content;
-    content += R"(<?xml version="1.0" encoding="UTF-8"?>\n)";
-    content += R"(<root>\n)";
-    content += R"(    <attention text="File=/sde/preview/20220629/20220629_115750.osfz Tag=preview"/>\n)";
-    content += R"(</root>)";
+    std::string content = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<root>\r\n    <attention text=\"File=/sde/preview/20220629/20220629_115750.osfz Tag=preview\"/>\r\n</root>\r\n";
 
     httpmock::HttpMockServer mockServer(port);
     mockServer.start();
@@ -171,12 +166,7 @@ TEST(HttpMockServer, PostMultipart)
 TEST(HttpMockServer, PostRawData)
 {
     std::string url = "/post-raw-url";
-
-    std::string content;
-    content += R"(<?xml version="1.0" encoding="UTF-8"?>\n)";
-    content += R"(<root>\n)";
-    content += R"(    <attention text="File=/sde/preview/20220629/20220629_115750.osfz Tag=preview"/>\n)";
-    content += R"(</root>)";
+    std::string content = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<root>\r\n    <attention text=\"File=/sde/preview/20220629/20220629_115750.osfz Tag=preview\"/>\r\n</root>\r\n";
 
     httpmock::HttpMockServer mockServer(port);
     mockServer.start();
