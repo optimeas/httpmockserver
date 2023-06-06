@@ -1,6 +1,6 @@
 #pragma once
 
-#include "httpmockserver.hpp"
+#include "httpmockserver/httpmockserver.hpp"
 
 #include <gtest/gtest.h>
 

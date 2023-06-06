@@ -1,4 +1,4 @@
-#include "httpmockserver/testenvironment.hpp"
+#include "testenvironment.hpp"
 
 #include <gmock/gmock.h>
 #include <curl/curl.h>

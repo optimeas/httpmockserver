@@ -21,7 +21,7 @@ add_test(${PROJECT_NAME} ${PROJECT_NAME})
 
 # We create separate applications here to test the "global" TestEnvironment
 set(TEST_ENV_AUTO_PROJECT "testenvironment-autoport-tests")
-add_executable(${TEST_ENV_AUTO_PROJECT} testenvironment_autoport_tests.cpp)
+add_executable(${TEST_ENV_AUTO_PROJECT} testenvironment.cpp testenvironment_autoport_tests.cpp)
 target_link_libraries(${TEST_ENV_AUTO_PROJECT} PRIVATE
     GTest::GTest
     GTest::Main
@@ -31,7 +31,7 @@ target_link_libraries(${TEST_ENV_AUTO_PROJECT} PRIVATE
 add_test(${TEST_ENV_AUTO_PROJECT} ${TEST_ENV_AUTO_PROJECT})
 
 set(TEST_ENV_FIXED_PROJECT "testenvironment-fixedport-tests")
-add_executable(${TEST_ENV_FIXED_PROJECT} testenvironment_fixedport_tests.cpp)
+add_executable(${TEST_ENV_FIXED_PROJECT} testenvironment.cpp testenvironment_fixedport_tests.cpp)
 target_link_libraries(${TEST_ENV_FIXED_PROJECT} PRIVATE
     GTest::GTest
     GTest::Main

@@ -2,12 +2,10 @@ project(httpmockserver)
 
 set(HEADERS
 	include/httpmockserver/httpmockserver.hpp
-	include/httpmockserver/testenvironment.hpp
 )
 
 set(SOURCES
 	httpmockserver.cpp
-	testenvironment.cpp
 )
 
 # sudo apt-get install libmicrohttpd-dev
