@@ -4,6 +4,7 @@
 #include <iostream>
 #include <thread>
 
+#include <algorithm>
 #include <chrono>
 #include <string.h>
 
