@@ -89,7 +89,7 @@ TEST(HttpMockServer, Get)
 TEST(HttpMockServer, PostFormUrlEncoded)
 {
     std::string url = "/post-form-url";
-    char urlFields[] = "name=daniel&project=curl";
+    const char urlFields[] = "name=daniel&project=curl";
 
     httpmock::HttpMockServer mockServer(port);
     mockServer.start();

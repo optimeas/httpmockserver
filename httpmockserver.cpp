@@ -265,7 +265,7 @@ void HttpMockServer::onRequestCompleted([[maybe_unused]] MHD_Connection *connect
         MHD_destroy_post_processor(connectionData->postProcessor);
     }
 
-    auto savedConnectionData = std::find_if(m_runningConnections.begin(), m_runningConnections.end(), [connectionData](std::unique_ptr<ConnectionData> &entry)
+    auto savedConnectionData = std::find_if(m_runningConnections.begin(), m_runningConnections.end(), [connectionData](const std::unique_ptr<ConnectionData> &entry)
     {
         return connectionData == entry.get();
     });

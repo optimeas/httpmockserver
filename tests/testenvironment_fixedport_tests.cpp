@@ -17,7 +17,7 @@ TEST(TestEnvironmentFixedPort, Valid)
 TEST(TestEnvironmentFixedPort, PostFormUrlEncoded)
 {
     std::string url = "/post-form-url";
-    char urlFields[] = "name=daniel&project=curl";
+    const char urlFields[] = "name=daniel&project=curl";
 
     CURL *curlHandle = curl_easy_init();
     EXPECT_NE(curlHandle, nullptr);
